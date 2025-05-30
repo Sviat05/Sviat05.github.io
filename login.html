@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="media/free-icon-malware-3076278.ico" sizes="16x16">
+    <link rel="shortcut icon" href="media/free-icon-malware-3076278.ico" type="image/x-icon">
+    <meta name="description" content="Сайт візитка платіжної платформи">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo"><a href="index.html">Primer
+        </a></div>
+        <nav class="nav-links">
+            <a href="index.html">Головна</a>
+            <a href="product.html">Продукти</a>
+            <a href="blog.html">Блог</a>
+            <a href="contacts.html">Зв'язатись<i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a>
+        </nav>
+        <div class="nav-actions">
+            <a href="login.html" class="contact-btn">Кабінет</a>
+        </div>
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span id="closePaymentModal" class="close-btn">×</span>
+            <h3>Оплата тарифу</h3>
+            <form id="paymentForm">
+                <label for="email">Пошта бізнесу:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="cardNumber">Номер картки:</label>
+                <input type="text" id="cardNumber" name="cardNumber" maxlength="19" required>
+                <label for="expiryDate">Дата закінчення картки (MM/YY):</label>
+                <input type="text" id="expiryDate" name="expiryDate" required>
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" maxlength="3" required>
+                <button type="button" id="payButton">Оплатити</button>
+            </form>
+        </div>
+    </div>
+    <button id="scrollToTop" class="scroll-btn"><i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i></button>
+    <div class="container-login">
+        <div class="sidebar">
+            <h3 id="planBadge">Тариф: —</h3>
+            <h3 id="feeBadge">Ваш відсоток комісії —</h3>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <h3>Загальний обсяг <span class="badge">UAH</span></h3>
+                <div class="metric" id="volMetric">0₴</div>
+            </div>
+            <div class="card">
+                <h3>Успішні платежі</h3>
+                <div class="metric" id="succMetric">0</div>
+            </div>
+            <div class="card">
+                <h3>Ставка відшкодування</h3>
+                <div class="metric" id="refMetric">0%</div>
+            </div>
+            <div class="card">
+                <div id="commissionFee" class="metric">Оплата комісії: —</div>
+                <button id="openPaymentModalButton" class="cta-btn">Перейти до оплати</button>
+            </div>
+            <div class="card">
+                <h3>
+                    <i class="fa-solid fa-circle-info tooltip" id="hint">
+                        <span class="tooltiptext">Використовуйте ці ключі для тестування вашого API.</span>
+                    </i>
+                    Test API Keys
+                </h3>
+                <div id="apiKeyContainer">
+                    <button id="generateApiKey" class="cta-btn">Генерувати Test API Key</button>
+                    <div id="apiKey" style="margin-top: 10px; color: #555; font-size: 16px;"></div>
+                </div>
+            </div>
+            <div class="card">
+                <button id="nextMonthButton" class="cta-btn">Наступний місяць</button>
+            </div>
+        </div>
+        <div class="card" style="margin-top:40px;">
+            <h3>Обсяг платежів по місяцях</h3>
+            <canvas id="volChart"></canvas>
+        </div>
+        <div class="card" id="paymentHistorySection" style="margin-top:40px;">
+            <h3>Історія оплат</h3>
+            <ul id="paymentHistoryList"></ul>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="media/logo.png" alt="logotype">
+            </div>
+            <div class="footer-row">
+                <div class="footer-column">
+                    <h3>Продукт</h3>
+                    <a href="index.html">Головна</a>
+                    <a href="blog.html">Блог</a>
+                    <a href="contacts.html">Контакти</a>
+                    <a href="product.html">Продукти</a>
+                    <a href="https://primer.io/apps-integrations">Програми & Інтеграції</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Ресурси</h3>
+                    <a href="https://primer.io/docs/api/v2.4/introduction/getting-started">Посилання на API</a>
+                    <a href="https://status.primer.io">Статус сервісу</a>
+                    <a href="https://primer.io/terms">Терміни</a>
+                    <a href="https://primer.io/docs/">Документація</a>
+                    <a href="https://primer.io/privacy">Приватність</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Будьте в курсі подій</h3>
+                    <div class="social-icons">
+                        <a href="https://creators.spotify.com/pod/profile/primer-payments/"><i class="fa-brands fa-spotify fa-xl" style="color: #616161;"></i></a>
+                        <a href="https://www.linkedin.com/company/primerapi/"><i class="fa-brands fa-linkedin-in fa-xl" style="color: #616161;"></i></a>
+                        <a href="https://www.youtube.com/channel/UCblj8Ya4PGjRbKVXmVwKyeQ"><i class="fa-brands fa-youtube fa-xl" style="color: #616161;"></i></a>
+                        <a href="https://www.instagram.com"><i class="fa-brands fa-instagram fa-xl" style="color: #616161;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© Primer 2023</p>
+            <div class="footer-partners">
+                <span><img src="media/balderton.png" alt=""></span>
+                <span><img src="media/accel.png" alt=""></span>
+                <span><img src="media/iconiq.png" alt=""></span>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="media/free-icon-malware-3076278.ico" sizes="16x16">
+    <link rel="shortcut icon" href="media/free-icon-malware-3076278.ico" type="image/x-icon">
+    <meta name="description" content="Сайт візитка платіжної платформи">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<header class="navbar">
+    <div class="logo"><a href="index.html">Primer
+    </a></div>
+    <nav class="nav-links">
+        <a href="index.html">Головна</a>
+        <a href="product.html">Продукти</a>
+        <a href="blog.html">Блог</a>
+        <a href="contacts.html">Зв'язатись<i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a>
+    </nav>
+    <div class="nav-actions">
+        <a href="login.html" class="contact-btn">Кабінет</a>
+    </div>
+    <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+<button id="scrollToTop" class="scroll-btn"><i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i></button>
+<div class="container-blog">
+    <section class="section calculator">
+        <h2>Калькулятор комісій</h2>
+        <input type="number" id="amount" placeholder="Сума транзакцій у ₴" />
+        <select id="plan">
+            <option value="0.02">Старт (2%)</option>
+            <option value="0.015">Бізнес (1.5%)</option>
+            <option value="0.01">Підприємство (1%)</option>
+        </select>
+        <div class="result" id="commissionResult">Комісія: 0.00₴</div>
+    </section>
+    <section class="section plans">
+        <h2>Наші тарифи</h2>
+        <div class="plans-grid" id="plansGrid"></div>
+    </section>
+    <section class="section faq">
+        <h2>Часті запитання (FAQ)</h2>
+        <div class="faq-item">
+            <h4>Яка мінімальна сума транзакції?</h4>
+            <p>Мінімальної суми немає — ми працюємо з будь-яким обсягом транзакцій.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Чи підтримуєте Apple Pay та Google Pay?</h4>
+            <p>Так, ми підтримуємо основні цифрові гаманці включно з Apple Pay, Google Pay, PayPal тощо.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Як почати інтеграцію?</h4>
+            <p>Просто заповніть <a href="contacts.html">форму</a> або зверніться до нас — ми допоможемо з перших кроків.</p>
+        </div>
+    </section>
+</div>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="media/logo.png" alt="logotype">
+        </div>
+        <div class="footer-row">
+            <div class="footer-column">
+                <h3>Продукт</h3>
+                <a href="index.html">Головна</a>
+                <a href="blog.html">Блог</a>
+                <a href="contacts.html">Контакти</a>
+                <a href="product.html">Продукти</a>
+                <a href="https://primer.io/apps-integrations">Програми & Інтеграції</a>
+            </div>
+            <div class="footer-column">
+                <h3>Ресурси</h3>
+                <a href="https://primer.io/docs/api/v2.4/introduction/getting-started">Посилання на API</a>
+                <a href="https://status.primer.io">Статус сервісу</a>
+                <a href="https://primer.io/terms">Терміни</a>
+                <a href="https://primer.io/docs/">Документація</a>
+                <a href="https://primer.io/privacy">Приватність</a>
+            </div>
+            <div class="footer-column">
+                <h3>Будьте в курсі подій</h3>
+                <div class="social-icons">
+                    <a href="https://creators.spotify.com/pod/profile/primer-payments/"><i class="fa-brands fa-spotify fa-xl" style="color: #616161;"></i></a>
+                    <a href="https://www.linkedin.com/company/primerapi/"><i class="fa-brands fa-linkedin-in fa-xl" style="color: #616161;"></i></a>
+                    <a href="https://www.youtube.com/channel/UCblj8Ya4PGjRbKVXmVwKyeQ"><i class="fa-brands fa-youtube fa-xl" style="color: #616161;"></i></a>
+                    <a href="https://www.instagram.com"><i class="fa-brands fa-instagram fa-xl" style="color: #616161;"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© Primer 2023</p>
+        <div class="footer-partners">
+            <span><img src="media/balderton.png" alt=""></span>
+            <span><img src="media/accel.png" alt=""></span>
+            <span><img src="media/iconiq.png" alt=""></span>
+        </div>
+    </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
